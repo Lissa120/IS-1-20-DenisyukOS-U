@@ -115,9 +115,9 @@ namespace IS_1_20_DenisukOS_U
             listBox1.Items.Add($"Артикул: {metroTextBox1.Text}");
             listBox1.Items.Add($"Цена: {metroTextBox2.Text}");
             listBox1.Items.Add($"Год выпуска: {metroTextBox3.Text}");
-            listBox1.Items.Add($"Частота оборотов: {metroTextBox4.Text}");
-            listBox1.Items.Add($"Интерфейс: {metroTextBox5.Text}");
-            listBox1.Items.Add($"Объем памяти: {metroTextBox6.Text}");
+            listBox1.Items.Add($"Частота: {metroTextBox7.Text}");
+            listBox1.Items.Add($"Производитель: {metroTextBox5.Text}");
+            listBox1.Items.Add($"Объем памяти: {metroTextBox9.Text}");
             //Вызывание метода
             G1.Display();
         }

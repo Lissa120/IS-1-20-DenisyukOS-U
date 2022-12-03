@@ -27,5 +27,22 @@ namespace IS_1_20_DenisukOS_U
             Zd1 a1 = new Zd1();
             a1.ShowDialog();
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Zd2 a2 = new Zd2();
+            a2.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Zd3 a3 = new Zd3();
+            a3.ShowDialog();
+        }
     }
 }
