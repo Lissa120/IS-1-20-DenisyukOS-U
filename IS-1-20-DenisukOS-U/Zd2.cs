@@ -13,16 +13,17 @@ namespace IS_1_20_DenisukOS_U
 {
     public partial class Zd2 : Form
     {
+        MySqlConnection conn;
         //Создаем класс
         public class Connection
         {
             //Создаем MySqlConnection, чтобы подключаться к БД
-            public MySqlConnection Conn()
+            public static MySqlConnection OpenConn()
             {
+                //"server=chuc.caseum.ru;port=33333;user=st_1_20_12;database=is_1_20_st12_KURS;password=27225069;"
                 string connect = "server=chuc.caseum.ru;post=33333;user=uchebka;database=uschebka;password=uchebka;"; //Переменная string, содерживающая строку подключения
-                MySqlConnection Conn;
-                Conn = new MySqlConnection(connect); //Экземпляр класса, в которой строка подключения
-                return Conn; //Возврат строки
+                MySqlConnection conn = new MySqlConnection(connect); //Экземпляр класса, в которой строка подключения
+                return conn; //Возврат строки
             }
         }
         public Zd2()
@@ -32,18 +33,17 @@ namespace IS_1_20_DenisukOS_U
 
         private void Zd2_Load(object sender, EventArgs e)
         {
-            //Создаем экземпляр класса Connection
-            Connection Conn9 = new Connection();
+            conn = Connection.OpenConn();
             //Прогоняем выполнение метода
             try
             {
                 //Выполнение метода
-                Conn9.Conn();
+                conn.Open();
             }
-            catch
+            catch(Exception ex)
             {
                 //Сообщение об ошибке, если есть исключение
-                MessageBox.Show("Возникла ошибочка!");
+                MessageBox.Show(ex.Message);
             }
         }
     }

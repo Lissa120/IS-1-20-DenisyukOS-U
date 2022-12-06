@@ -77,6 +77,7 @@ namespace IS_1_20_DenisukOS_U
             this.button4.TabIndex = 3;
             this.button4.Text = "Задание4";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -86,6 +87,7 @@ namespace IS_1_20_DenisukOS_U
             this.button5.TabIndex = 4;
             this.button5.Text = "Задание5";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // bindingSource1
             // 

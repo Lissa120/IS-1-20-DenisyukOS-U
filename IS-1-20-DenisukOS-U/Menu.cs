@@ -44,5 +44,16 @@ namespace IS_1_20_DenisukOS_U
             Zd3 a3 = new Zd3();
             a3.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Zd4 a4 = new Zd4();
+            a4.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
