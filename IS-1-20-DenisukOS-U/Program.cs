@@ -14,8 +14,8 @@ namespace IS_1_20_DenisukOS_U
             //создаём метод MySqlConnection, который будет выполнять подключение формы к БД
             public MySqlConnection ConnBD()
             {
-                string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
-                MySqlConnection conn = new MySqlConnection(connStr);
+                string connect = "server=chuc.caseum.ru;port=33333;user=st_1_20_12;database=is_1_20_st12_KURS;password=27225069;";
+                MySqlConnection conn = new MySqlConnection(connect);
                 if (conn.State == System.Data.ConnectionState.Closed)
                     conn.Open();
                 return conn;
@@ -27,6 +27,7 @@ namespace IS_1_20_DenisukOS_U
         [STAThread]
         static void Main()
         {
+            Connection1 C9 = new Connection1();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Menu());

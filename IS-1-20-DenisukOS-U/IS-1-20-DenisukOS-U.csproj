@@ -93,7 +93,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="connBD.cs" />
+    <Compile Include="Connbd.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>

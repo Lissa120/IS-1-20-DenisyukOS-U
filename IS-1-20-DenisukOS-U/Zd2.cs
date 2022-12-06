@@ -20,8 +20,9 @@ namespace IS_1_20_DenisukOS_U
             //Создаем MySqlConnection, чтобы подключаться к БД
             public static MySqlConnection OpenConn()
             {
+                //"server=chuc.caseum.ru;port=33333;user=uchebka;database=uchebka;password=uchebka;"
                 //"server=chuc.caseum.ru;port=33333;user=st_1_20_12;database=is_1_20_st12_KURS;password=27225069;"
-                string connect = "server=chuc.caseum.ru;post=33333;user=uchebka;database=uschebka;password=uchebka;"; //Переменная string, содерживающая строку подключения
+                string connect = "server=chuc.caseum.ru;post=33333;user=uchebka;database=uchebka;password=uchebka;"; //Переменная string, содерживающая строку подключения
                 MySqlConnection conn = new MySqlConnection(connect); //Экземпляр класса, в которой строка подключения
                 return conn; //Возврат строки
             }
