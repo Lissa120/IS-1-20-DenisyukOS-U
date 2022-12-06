@@ -64,11 +64,11 @@ namespace IS_1_20_DenisukOS_U
         {
             conn.Open();
             int row = e.RowIndex;
-            string commandStr = "SELECT Notification.number, Notification.employee, Notification.people, Notification.type, Notification.where_from, Notification.weight, Notification.cost, Notification.date, Notification.delivery_address FROM Notification " +
+            string commStr = "SELECT Notification.number, Notification.employee, Notification.people, Notification.type, Notification.where_from, Notification.weight, Notification.cost, Notification.date, Notification.delivery_address FROM Notification " +
                 "JOIN Employee ON Employee.id_employee = Notification.employee JOIN Client ON Client.id_client = Notification.people JOIN Type ON Type.id_type_package = Notification.type JOIN From_where ON From_where.id_country_of_departure = Notification.where_from JOIN Price ON Price.id_price_list = Notification.cost " +
                 "JOIN Arrival ON Arrival.id_arrival_address = Notification.delivery_address";
 
-            MySqlCommand comm = new MySqlCommand(commandStr, conn);
+            MySqlCommand comm = new MySqlCommand(commStr, conn);
             MySqlDataReader reader = comm.ExecuteReader();
 
             string inform = "";

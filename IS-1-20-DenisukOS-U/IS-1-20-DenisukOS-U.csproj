@@ -153,6 +153,9 @@
     <EmbeddedResource Include="Zd3.resx">
       <DependentUpon>Zd3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Zd4.resx">
+      <DependentUpon>Zd4.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
