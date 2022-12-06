@@ -9,16 +9,18 @@ namespace IS_1_20_DenisukOS_U
 {
     static class Program
     {
-        public class Connection1
+        class Сonnection // Класс
         {
-            //создаём метод MySqlConnection, который будет выполнять подключение формы к БД
-            public MySqlConnection ConnBD()
+            string server = "chuc.caseum.ru";
+            //string server = "10.90.12.110";
+            string port = "33333";
+            string user = "st_1_20_2";
+            string database = "is_1_20_st2_KURS";
+            string password = "34354559";
+            public string connStr;
+            public string Connectreturn()
             {
-                string connect = "server=chuc.caseum.ru;port=33333;user=st_1_20_12;database=is_1_20_st12_KURS;password=27225069;";
-                MySqlConnection conn = new MySqlConnection(connect);
-                if (conn.State == System.Data.ConnectionState.Closed)
-                    conn.Open();
-                return conn;
+                return connStr = $"host={server};port={port};user={user};database={database};password={password}";
             }
         }
         /// <summary>
@@ -27,7 +29,6 @@ namespace IS_1_20_DenisukOS_U
         [STAThread]
         static void Main()
         {
-            Connection1 C9 = new Connection1();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Menu());

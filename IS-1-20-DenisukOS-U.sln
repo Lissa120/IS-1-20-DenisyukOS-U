@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31321.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS-1-20-DenisukOS-U", "IS-1-20-DenisukOS-U\IS-1-20-DenisukOS-U.csproj", "{102A85D6-2236-47A4-91DB-7A05B5BA5CAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectDB", "ConnectDB\ConnectDB.csproj", "{736E9853-235D-438E-BDBA-5BDF5B943391}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{102A85D6-2236-47A4-91DB-7A05B5BA5CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{102A85D6-2236-47A4-91DB-7A05B5BA5CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{102A85D6-2236-47A4-91DB-7A05B5BA5CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{736E9853-235D-438E-BDBA-5BDF5B943391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{736E9853-235D-438E-BDBA-5BDF5B943391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{736E9853-235D-438E-BDBA-5BDF5B943391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{736E9853-235D-438E-BDBA-5BDF5B943391}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
