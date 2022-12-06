@@ -53,7 +53,8 @@ namespace IS_1_20_DenisukOS_U
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Zd5 a5 = new Zd5();
+            a5.ShowDialog();
         }
     }
 }
