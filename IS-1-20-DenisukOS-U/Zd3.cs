@@ -21,7 +21,7 @@ namespace IS_1_20_DenisukOS_U
             {
                 //"server=chuc.caseum.ru;port=33333;user=st_1_20_12;database=is_1_20_st12_KURS;password=27225069;"
                 //"server=chuc.caseum.ru;port=33333;user=uchebka;database=uchebka;password=uchebka;"
-                string connect = "server=chuc.caseum.ru;port=33333;user=st_1_20_12;database=is_1_20_st12_KURS;password=27225069;";
+                string connect = "server=chuc.caseum.ru;port=33333;user=uchebka;database=uchebka;password=uchebka;";
                 MySqlConnection conn = new MySqlConnection(connect);
                 return conn;
             }
