@@ -65,14 +65,16 @@ namespace IS_1_20_DenisukOS_U
             {
                 conn.Open();
 
-                MySqlCommand command = new MySqlCommand($"SELECT fio, date_of_Birth FROM t_datatime;", conn);
+                MySqlCommand command = new MySqlCommand($"SELECT id, fio, date_of_Birth, photoUrl FROM t_datatime;", conn);
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
                     int grid = dataGridView1.Rows.Add();
                     dataGridView1.Rows[grid].Cells[0].Value = reader[0].ToString();
                     dataGridView1.Rows[grid].Cells[1].Value = reader[1].ToString();
-                }
+                    dataGridView1.Rows[grid].Cells[2].Value = reader[2].ToString();
+                    dataGridView1.Rows[grid].Cells[3].Value = reader[3].ToString();
+            }
                 reader.Close();
 
             }

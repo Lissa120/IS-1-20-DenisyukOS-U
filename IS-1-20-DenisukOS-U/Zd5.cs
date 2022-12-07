@@ -28,29 +28,30 @@ namespace IS_1_20_DenisukOS_U
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
 
-                MySqlCommand command = new MySqlCommand($"INSERT INTO t_Uchebka_Smolin (`fioStud`, `datetimeStud`) VALUES (@fio, @datetime);", conn);
+                MySqlCommand command = new MySqlCommand($"INSERT INTO t_Uchebka_DenisukOS" +
+                    $" (`fioStud`, `datetimeStud`) VALUES (@fio, @datetime);", conn);
 
                 command.Parameters.Add("@fio", MySqlDbType.VarChar);
                 command.Parameters.Add("@datetime", MySqlDbType.VarChar);
 
                 conn.Open();
 
-                if (command.ExecuteNonQuery() == 1)
-                {
+                //if (command.ExecuteNonQuery() == 1)
+                //{
                     MessageBox.Show("Запись добавлена");
-                }
-            }
-            catch
-            {
+                //}
+            //}
+            //catch
+            //{
                 MessageBox.Show("Ошибка добавления");
-            }
-            finally
-            {
+            //}
+            //finally
+            //{
                 conn.Close();
-            }
+            //}
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
