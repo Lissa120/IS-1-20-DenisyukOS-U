@@ -13,8 +13,8 @@ namespace IS_1_20_DenisukOS_U
 {
     public partial class Zd3 : Form
     {
-        MySqlConnection conn;
-        Class1 connect;
+        MySqlConnection conn; // обявляем переменную conn
+        Class1 connect; // подключение бд
         public Zd3()
         {
             InitializeComponent();
@@ -30,6 +30,7 @@ namespace IS_1_20_DenisukOS_U
         {
             try
             {
+                // команда с INNER JOIN 
                 conn.Open();
                 string sql = "SELECT id_people, fio_people, id_client, fio_client FROM People INNER JOIN Client ON id_people = id_client";
                 dataGridView1.Columns.Add("id_people", "ид человека");

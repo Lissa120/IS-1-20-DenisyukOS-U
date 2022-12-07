@@ -15,22 +15,43 @@ namespace IS_1_20_DenisukOS_U
 {
     public partial class Zd4 : Form
     {
+        Class1 a1 = new Class1();// обявление переменной класса 
         MySqlConnection conn;
-        Class1 connect;
+        private BindingSource bSource = new BindingSource();
+        private MySqlDataAdapter MyDA = new MySqlDataAdapter();
+        DataTable table = new DataTable();
         public Zd4()
         {
             InitializeComponent();
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void Zd4_Load(object sender, EventArgs e)
+        {
+            //подключение к бд
+            a1.Connectreturn();
+            conn = new MySqlConnection(a1.connStr);
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
                 int id = dataGridView1.SelectedCells[0].RowIndex + 1;
+
                 conn.Open();
-                string sql = $"SELECT photoUrl FROM datatime WHERE Id = {id}";
+
+                string sql = $"SELECT photoUrl FROM t_datatime WHERE Id = {id}";
+
                 MySqlCommand command = new MySqlCommand(sql, conn);
+
                 string picture = command.ExecuteScalar().ToString();
+
                 pictureBox1.ImageLocation = picture;
+
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка загрузки фото");
             }
             finally
             {
@@ -38,20 +59,26 @@ namespace IS_1_20_DenisukOS_U
             }
         }
 
-        private void Zd4_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            connect = new Class1();
-            connect.Connectreturn();
-            conn = new MySqlConnection(connect.connStr);
-
-            string sql = "SELECT * FROM datatime";
             try
             {
                 conn.Open();
-                MySqlDataAdapter IDataAdapter = new MySqlDataAdapter(sql, conn);
-                DataSet ds2 = new DataSet();
-                IDataAdapter.Fill(ds2);
-                dataGridView1.DataSource = ds2.Tables[0];
+
+                MySqlCommand command = new MySqlCommand($"SELECT fio, date_of_Birth FROM t_datatime;", conn);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    int grid = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[grid].Cells[0].Value = reader[0].ToString();
+                    dataGridView1.Rows[grid].Cells[1].Value = reader[1].ToString();
+                }
+                reader.Close();
+
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка");
             }
             finally
             {
