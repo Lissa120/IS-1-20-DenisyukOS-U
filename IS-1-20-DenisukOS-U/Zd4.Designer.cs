@@ -31,11 +31,11 @@ namespace IS_1_20_DenisukOS_U
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -63,16 +63,6 @@ namespace IS_1_20_DenisukOS_U
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 143);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 52);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "БД";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "ID";
@@ -95,6 +85,16 @@ namespace IS_1_20_DenisukOS_U
             this.Column4.HeaderText = "Url";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 143);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(174, 52);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "БД";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Zd4
             // 
